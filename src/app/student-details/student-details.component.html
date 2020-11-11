@@ -1,0 +1,32 @@
+
+<h2>Student Details</h2> 
+
+<hr/>
+<div *ngIf="students">
+  <div>
+    <label><b>Register Number: </b></label> {{students.regno}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{students.name}}
+  </div>
+  <div>
+    <label><b>Tamil:</b></label> {{students.mark1}}
+  </div> 
+  <div>
+    <label><b>English :</b></label> {{students.mark2}}
+  </div> 
+  <div>
+    <label><b>Maths:</b></label> {{students.mark3}}
+  </div> 
+  <div>
+    <label><b>Science:</b></label> {{students.mark4}}
+  </div> 
+  <div>
+    <label><b>Social Science:</b></label> {{students.mark5}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Student List</button><br>
+

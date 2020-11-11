@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h1>Student Result List</h1>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Register Number</th>        
+            <th>Name</th>
+            <th>Tamil</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>Social Science</th>
+            <th>Total</th>
+            <th>Average</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students | async">
+            <td>{{student.regno}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.mark1}}</td>
+            <td>{{student.mark2}}</td>
+            <td>{{student.mark3}}</td>
+            <td>{{student.mark4}}</td>
+            <td>{{student.mark5}}</td>
+            <td>{{student.total}}</td>
+            <td>{{student.average}}</td>
+            <td>{{student.result}}</td>
+            <td>
+              <button *ngIf="this.isvariable"   [hidden]="!isvariable" (click)="updateStudent(student.regno)" class="btn btn-success"style="margin-left: 10px">Update</button>
+              <button  *ngIf="this.isvariable"  [hidden]="!isvariable" (click)="deleteStudent(student.regno)" class="btn btn-danger"style="margin-left: 10px">Delete</button>
+                <button (click)="studentDetails(student.regno)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
